@@ -1,0 +1,94 @@
+# Project Synopsis - WeatherFORCAST
+
+The Single HTML Page will display the weather of  a location of your choice eih by dropdown selection / by input box selection and display the data of that city. Display of current date and respective four dates.
+
+
+## Getting Started
+
+Initiaially steps to to proceed the project.
+- Requirement gathering ( API, Webserver, public repository (github - https://github.com/krish-project/weather)
+- Identified the requirements to build the project
+	- Create a account in githhub (reason is open source file repository and webserver facility)
+	- Create a signup at openweathermap.org
+	- Once its been done go to tab API and get the API key
+	- Check the API key in the url so that datas are coming or not.
+      		say " http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=aeb9aeb113930e875f7ff78e75ff2514" in my case.
+			
+			
+## Code Example	
+
+If we segregate each component and store each variable in different variable.
+
+var api_path = 'http://api.openweathermap.org/data/2.5/weather?q=';
+	var apikey = '&appid=aeb9aeb113930e875f7ff78e75ff2514';
+	var units = '&units=metric';
+While calling live we will call "url" - 
+
+funtion wCondition() {
+		var url = api_path + input.value() + apikey + units;
+		 LoadJSON("city.json", gotData);  
+                //in case of realtime inplace of json file calling locally we will call variable "url"//
+       }
+Currently to test I created sample jason file locally and parsing data through wscript.js
+
+Also to call "City" from "Input box" and "sumit button" declared variable and created function called 
+	var input = select('#city')
+button.mousePressed(wCondition)
+funtion wCondition() {
+var url = api_path + input.value() + apikey + units;	
+LoadJSON("city.json", gotData);     //in case of realtime inplace of json file calling locally we will call variable "url"//
+}
+
+
+## Motivation:
+The project gave me immense scope to work on weather API, understand different unit termology and use them in html through JSON.
+Steps pending - 
+1) Actual data pulling from realtime data
+2) Selection of "City" from input box and display data accordingly.
+
+
+### Prerequisities Installation
+1) Software named Notepad ++ / Dreamweaver 
+2) Adobe Photoshop for designing purpuse.
+
+
+###  Site Reference
+API ID: - aeb9aeb113930e875f7ff78e75ff2514
+Site - http://www.jsoneditoronline.org/ - To make data formated and get the objects.
+Site - https://jsonformatter.curiousconcept.com/ - To test json's validation.
+
+
+## Running the tests
+Click on the link - 
+Select Blank Field shows alert
+Current Weather data fetching from "city.json"
+
+
+### coding style tests
+CSS - Taken existing Style of mine and worked.
+
+
+## Deployment
+Uploaded in the site url - 
+Add additional notes about how to deploy this on a live system
+
+
+## Process can be incorporated - 
+uploaded to the server - https://github.com/krish-project/weather direct to master folder
+Commit changes if needed further modification and can be dune under each epic branch created under master
+Further modification can be done by pull from the master to local directory once done can raise pull request and send for review to other developers. Once the code reviewed it can be merged with main branch "master"
+We can pull or push through Sourcetree software. 
+Once modification ticket created in the jira we can create branch under bitbucket and pull code through sourcetree.
+
+
+## Versioning
+Source tree / bibucket can take care of vertion control.
+
+
+## Authors
+
+* **Krishnendu Chatterjee** - *Initial work* - [WeatherFORCAST](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/krish-project/weather) 
+
+
