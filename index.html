@@ -1,0 +1,207 @@
+<!DOCTYPE html>  
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="keywords" content="weather, world, Openstreetmap, weather, layer" />
+  		<meta name="description" content="A layer with current weather conditions in cities for world wide" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        
+
+		<title>WeatherApp | Welcome</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/font-awesome.css" rel="stylesheet">
+		
+		<!-- Custom styles for this template -->
+		<link href="css/main.css" rel="stylesheet">
+        <link href="css/global.css" rel="stylesheet">
+        
+        <!-- Custom javascript file to load JSON -->
+        <script type="text/javascript" src="city.json"></script>
+        <script type="text/javascript" src="wscript.js"></script>
+        <script>
+			function myFunction() {
+				var x = document.getElementById("mySelect").value;
+				if ( x == "" ) {
+					alert('Selcet a Location')	}						
+				else {
+					document.getElementById("demo").innerHTML = "You selected: " + x;
+					 }
+			}
+		</script>
+        
+  </head>
+
+  <body onload="load()">
+	<header class="header-main">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<img src="./assets/icons/08.svg" style="margin-right:10px; margin-top:10px; width:30px; height:30px;"><a class="navbar-brand" href="#" style="margin-left:10px; color:white;"><span style="color:#e7e7e7;">Weather</span> FORCAST</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="#">Contact</a></li>
+                <li><a href="#">Register</a></li>
+				<li><a href="#">Login</a></li>
+			  </ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
+	</header>
+	
+	<section>		
+      	<div class="container-fluid">
+        <h1><img src="./assets/icons/02.svg" style="margin-right:10px; width:50px; height:50px;">Weather Report</h1>
+        </div>
+      	<div class="container-fluid tile">
+        	<div class="header">
+        		<div class="col-xs-12 col-sm-4 col-md-3"><h2>Select Location</h2></div>
+            <div class="col-xs-12 col-sm-4 col-md-9">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <!--<p>City: <input id ="p" value=""><button id="submit">Submit</button></p>-->
+                  
+                  <select id="mySelect" onchange="myFunction()" class="form-control">
+                    <option selected="selected" value="" alert="Please select a location">Select One</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Kolkata">Kolkata</option>
+                  </select>
+                </div>
+          	</div>   
+          		<div class="row" style="margin-left:30px; margin-top:50px;">
+
+    				<div class="col-md-3" >
+                        <div class="block block-secondary">
+                            <h3>Current Weather</h3>
+                            <p id="demo"></p>
+                            <p id="p"></p>
+                            <div><img src="./assets/icons/08.svg" style="margin-right:10px; width:90px; height:90px;"></div>
+                            <h4>Aug 31</h4>
+                            <div class="temp">
+                        		<span class="large-temp" id="c"></span>
+                        		<span class="small-temp" id="f"></span>
+                    		</div>
+                            <p>Cloudy with a stray t-storm</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="block block-secondary">
+                            <h3>THU</h3>
+                            <div><img src="./assets/icons/11.svg" style="margin-right:10px; width:100px; height:100px;"></div>
+                            <h4>Sep 1</h4>
+                            <div class="temp">
+                        		<span class="large-temp">90°</span>
+                        		<span class="small-temp">/79°F</span>
+                    		</div>
+                            <p>Cloudy with a stray t-storm</p>
+                            <a href="#" class="btn btn-default">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="block block-secondary">
+                            <h3>FRI</h3>
+                            <div><img src="./assets/icons/20.svg" style="margin-right:10px; width:100px; height:100px;"></div>
+                            <h4>Sep 2</h4>
+                            <div class="temp">
+                        		<span class="large-temp">90°</span>
+                        		<span class="small-temp">/79°F</span>
+                    		</div>
+                            <p>Cloudy with a stray t-storm</p>
+                            <a href="#" class="btn btn-default">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="block block-secondary">
+                            <h3>SAT</h3>
+                            <div><img src="./assets/icons/26.svg" style="margin-right:10px; width:100px; height:100px;"></div>
+                            <h4>Sep 3</h4>
+                            <div class="temp">
+                        		<span class="large-temp">90°</span>
+                        		<span class="small-temp">/79°F</span>
+                    		</div>
+                            <p>A shower or thunderstorm</p>
+                            <a href="#" class="btn btn-default">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="block block-secondary">
+                            <h3>SUN</h3>
+                            <div><img src="./assets/icons/17.svg" style="margin-right:10px; width:100px; height:100px;"></div>
+                            <h4>Sep 4</h4>
+                            <div class="temp">
+                        		<span class="large-temp">90°</span>
+                        		<span class="small-temp">/79°F</span>
+                    		</div>
+                            <p>Cloudy with a stray t-storm</p>
+                            <a href="#" class="btn btn-default">Read More</a>
+                        </div>
+                    </div>
+                </div>        	
+        	</div> 
+         </div>  
+	</section>
+    
+	<footer class="footer-main">
+		<div class="container-fluid">
+			<!--<div class="row col-md-12">
+				<div class="col-md-4">
+					<h4>On the SkyApp</h4>
+					<ul>
+						<li class="app-appstore"><a href="#">App Store</a></li>
+						<li class="app-play"><a href="#">Google Play Store</a></li>
+						<li class="app-droid"><a href="#">Andriod Market</a></li>
+						<li class="app-windows"><a href="#">Windows</a></li>
+						<li class="app-chrome"><a href="#">Google Chrome Store</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h4>About</h4>
+					<ul>
+						<li><a href="#">What is SkyApp</a></li>
+						<li><a href="#">View our Products</a></li>
+						<li><a href="#">Advertise with US</a></li>
+						<li><a href="#">Career</a></li>
+						<li><a href="#">Web Development</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h4>Support</h4>
+					<ul>
+						<li><a href="#">Support Home</a></li>
+						<li><a href="#">Our Community</a></li>
+						<li><a href="#">Send a Ticket</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>-->
+        	<div class="row col-md-12">
+				<div class="col-md-6" style="text-align:left;"><a href="#" class="poweredBy"> Powered by WeatherFORCAST</a></div>
+        		<div class="col-md-6" style="text-align:right;"><span>&copy; 2016&nbsp;&nbsp;</span><a href="#">Terms &amp; Conditions</a>&nbsp;&nbsp;<a href="#">Privacy Policy</a></div>
+        	</div>
+         </div>
+     </footer>
+	
+	
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+    
+    
+    
+  </body>
+</html>
