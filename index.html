@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather by krish-project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Weather</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/krish-project/weather" class="btn">View on GitHub</a>
+      <a href="https://github.com/krish-project/weather/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/krish-project/weather/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="project-synopsis---weatherforcast" class="anchor" href="#project-synopsis---weatherforcast" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Synopsis - WeatherFORCAST</h1>
+
+<p>The Single HTML Page will display the weather of  a location of your choice eih by dropdown selection / by input box selection and display the data of that city. Display of current date and respective four dates.</p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>Initiaially steps to to proceed the project.</p>
+
+<ul>
+<li>Requirement gathering ( API, Webserver, public repository (github - <a href="https://github.com/krish-project/weather">https://github.com/krish-project/weather</a>)</li>
+<li>Identified the requirements to build the project
+
+<ul>
+<li>Create a account in githhub (reason is open source file repository and webserver facility)</li>
+<li>Create a signup at openweathermap.org</li>
+<li>Once its been done go to tab API and get the API key</li>
+<li>Check the API key in the url so that datas are coming or not.
+    say " <a href="http://api.openweathermap.org/data/2.5/forecast/city?id=524901&amp;APPID=aeb9aeb113930e875f7ff78e75ff2514">http://api.openweathermap.org/data/2.5/forecast/city?id=524901&amp;APPID=aeb9aeb113930e875f7ff78e75ff2514</a>" in my case.</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="code-example" class="anchor" href="#code-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Example</h2>
+
+<p>If we segregate each component and store each variable in different variable.</p>
+
+<p>var api_path = '<a href="http://api.openweathermap.org/data/2.5/weather?q=">http://api.openweathermap.org/data/2.5/weather?q=</a>';
+    var apikey = '&amp;appid=aeb9aeb113930e875f7ff78e75ff2514';
+    var units = '&amp;units=metric';
+While calling live we will call "url" - </p>
+
+<p>funtion wCondition() {
+        var url = api_path + input.value() + apikey + units;
+         LoadJSON("city.json", gotData);<br>
+                //in case of realtime inplace of json file calling locally we will call variable "url"//
+       }
+Currently to test I created sample jason file locally and parsing data through wscript.js</p>
+
+<p>Also to call "City" from "Input box" and "sumit button" declared variable and created function called 
+    var input = select('#city')
+button.mousePressed(wCondition)
+funtion wCondition() {
+var url = api_path + input.value() + apikey + units;<br>
+LoadJSON("city.json", gotData);     //in case of realtime inplace of json file calling locally we will call variable "url"//
+}</p>
+
+<h2>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation:</h2>
+
+<p>The project gave me immense scope to work on weather API, understand different unit termology and use them in html through JSON.
+Steps pending - 
+1) Actual data pulling from realtime data
+2) Selection of "City" from input box and display data accordingly.</p>
+
+<h3>
+<a id="prerequisities-installation" class="anchor" href="#prerequisities-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prerequisities Installation</h3>
+
+<p>1) Software named Notepad ++ / Dreamweaver 
+2) Adobe Photoshop for designing purpuse.</p>
+
+<h3>
+<a id="site-reference" class="anchor" href="#site-reference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Site Reference</h3>
+
+<p>API ID: - aeb9aeb113930e875f7ff78e75ff2514
+Site - <a href="http://www.jsoneditoronline.org/">http://www.jsoneditoronline.org/</a> - To make data formated and get the objects.
+Site - <a href="https://jsonformatter.curiousconcept.com/">https://jsonformatter.curiousconcept.com/</a> - To test json's validation.</p>
+
+<h2>
+<a id="running-the-tests" class="anchor" href="#running-the-tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running the tests</h2>
+
+<p>Click on the link - 
+Select Blank Field shows alert
+Current Weather data fetching from "city.json"</p>
+
+<h3>
+<a id="coding-style-tests" class="anchor" href="#coding-style-tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>coding style tests</h3>
+
+<p>CSS - Taken existing Style of mine and worked.</p>
+
+<h2>
+<a id="deployment" class="anchor" href="#deployment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deployment</h2>
+
+<p>Uploaded in the site url - 
+Add additional notes about how to deploy this on a live system</p>
+
+<h2>
+<a id="process-can-be-incorporated--" class="anchor" href="#process-can-be-incorporated--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Process can be incorporated -</h2>
+
+<p>uploaded to the server - <a href="https://github.com/krish-project/weather">https://github.com/krish-project/weather</a> direct to master folder
+Commit changes if needed further modification and can be dune under each epic branch created under master
+Further modification can be done by pull from the master to local directory once done can raise pull request and send for review to other developers. Once the code reviewed it can be merged with main branch "master"
+We can pull or push through Sourcetree software. 
+Once modification ticket created in the jira we can create branch under bitbucket and pull code through sourcetree.</p>
+
+<h2>
+<a id="versioning" class="anchor" href="#versioning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Versioning</h2>
+
+<p>Source tree / bibucket can take care of vertion control. </p>
+
+<h2>
+<a id="authors" class="anchor" href="#authors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors</h2>
+
+<ul>
+<li>
+<strong>Krishnendu Chatterjee</strong> - <em>Initial work</em> - <a href="https://github.com/PurpleBooth">WeatherFORCAST</a>
+</li>
+</ul>
+
+<p>See also the list of <a href="https://github.com/krish-project/weather">contributors</a> </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/krish-project/weather">Weather</a> is maintained by <a href="https://github.com/krish-project">krish-project</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
