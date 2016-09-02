@@ -5,7 +5,7 @@ The Single HTML Page will display the weather of  a location of your choice eih 
 
 ## Getting Started
 
-Initiaially steps to to proceed the project.
+Initiaially steps to proceed the project.
 - Requirement gathering ( API, Webserver, public repository (github - https://github.com/krish-project/weather)
 - Identified the requirements to build the project
 	- Create a account in githhub (reason is open source file repository and webserver facility)
@@ -22,22 +22,25 @@ If we segregate each component and store each variable in different variable.
 var api_path = 'http://api.openweathermap.org/data/2.5/weather?q=';
 	var apikey = '&appid=aeb9aeb113930e875f7ff78e75ff2514';
 	var units = '&units=metric';
-While calling live we will call "url" - 
+
+//While calling live we will call "url" - 
 
 funtion wCondition() {
 		var url = api_path + input.value() + apikey + units;
-		 LoadJSON("city.json", gotData);  
+		 LoadJSON("url", gotData);  
                 //in case of realtime inplace of json file calling locally we will call variable "url"//
        }
 Currently to test I created sample jason file locally and parsing data through wscript.js
 
 Also to call "City" from "Input box" and "sumit button" declared variable and created function called 
 	var input = select('#city')
-button.mousePressed(wCondition)
-funtion wCondition() {
-var url = api_path + input.value() + apikey + units;	
-LoadJSON("city.json", gotData);     //in case of realtime inplace of json file calling locally we will call variable "url"//
-}
+	button.mousePressed(wCondition)
+
+	funtion wCondition() {
+		var url = api_path + input.value() + apikey + units;	
+		LoadJSON("city.json", gotData);    
+		//in case of realtime inplace of json file calling locally we will call variable "url"//
+	}
 
 
 ## Motivation:
@@ -49,7 +52,7 @@ Steps pending -
 
 ### Prerequisities Installation
 1) Software named Notepad ++ / Dreamweaver 
-2) Adobe Photoshop for designing purpuse.
+2) Adobe Photoshop/Iluustrator for designing purpuse.
 
 
 ###  Site Reference
@@ -61,7 +64,8 @@ Site - https://jsonformatter.curiousconcept.com/ - To test json's validation.
 ## Running the tests
 Click on the link - 
 Select Blank Field shows alert
-Current Weather data fetching from "city.json"
+Select from dropdown selct the location.
+Current Weather data fetching from "city.json" locally
 
 
 ### coding style tests
