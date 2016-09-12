@@ -45,10 +45,15 @@ Also to call "City" from "Input box" and "sumit button" declared variable and cr
 
 ## Motivation:
 The project gave me immense scope to work on weather API, understand different unit termology and use them in html through JSON.
-Steps pending - 
+
+Steps pending initially- 
 1) Actual data pulling from realtime data
 2) Selection of "City" from input box and display data accordingly.
 
+Steps pending initially- 
+1) Actual data pulling from real time data - working but not with all dates.
+2) Selection of "City" from input box and display data accordingly. - working perfectly.
+3) Need to work Unit Testing through Qunit test tool but not got time to work on.
 
 ### Prerequisities Installation
 1) Software named Notepad ++ / Dreamweaver 
@@ -93,6 +98,6 @@ Source tree / bibucket can take care of vertion control.
 
 * **Krishnendu Chatterjee** - *Initial work* - [WeatherFORCAST](https://github.com/PurpleBooth)
 
-See also the list of [contributors](https://github.com/krish-project/weather) 
+
 
 
